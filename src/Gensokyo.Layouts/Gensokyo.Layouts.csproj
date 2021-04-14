@@ -5,6 +5,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <Import Project="..\Gensokyo.Layouts\Gensokyo.Layouts.projitems" Label="Shared" />
-
 </Project>
