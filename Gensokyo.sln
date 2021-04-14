@@ -3,121 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Gensokyo.Xaml", "src\Gensokyo.Xaml\Gensokyo.Xaml.shproj", "{B20EFEE9-2800-4F60-A48A-C336DA0A68F0}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Gensokyo.Layouts", "src\Gensokyo.Layouts\Gensokyo.Layouts.shproj", "{0054CC1F-8768-4CEF-B9FD-773B0907F518}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Gensokyo.Components", "src\Gensokyo.Components\Gensokyo.Components.shproj", "{27BB4B9D-9629-49E9-9421-309DCB47C19C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{4904CEE3-5D38-437D-8685-B2F53B6B0890}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Layouts", "Layouts", "{721DA068-C0DC-4723-BF02-7DB4EA2DD2F8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xaml", "Xaml", "{EF99DC08-D9F1-4E42-ADA9-FBA31D1C497C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Components.Core", "src\Gensokyo.Components.Core\Gensokyo.Components.Core.csproj", "{85C0B724-BCFD-409B-B8CF-DF402E40E145}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Xaml.Core", "src\Gensokyo.Xaml.Core\Gensokyo.Xaml.Core.csproj", "{AC858C1A-05F8-4CF8-926E-CAC79B097B00}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Layouts.Core", "src\Gensokyo.Layouts.Core\Gensokyo.Layouts.Core.csproj", "{95672F8E-4206-4F3B-B05D-F6E003C3E4EB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Components.NFX", "src\Gensokyo.Components.NFX\Gensokyo.Components.NFX.csproj", "{C4C05C77-CC18-485A-B909-622E9B8F028C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{11F1FA29-54C2-4B2B-8193-35254CEAA58E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{4F9A62C3-63B5-41A9-81F1-ABFC5AE3CFCF}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Gensokyo.Samples", "src\Gensokyo.Samples\Gensokyo.Samples.shproj", "{613FDEA2-9F81-4F61-A384-F2803B1E7E0C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Samples.Core", "src\Gensokyo.Samples.Core\Gensokyo.Samples.Core.csproj", "{03B4F380-1C00-46CF-A9BB-06DD5C196619}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Gensokyo.Testing", "src\Gensokyo.Testing\Gensokyo.Testing.shproj", "{36063217-7B15-4734-98BA-EBB8270E21F1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Testing.Core", "src\Gensokyo.Testing.Core\Gensokyo.Testing.Core.csproj", "{8BA4144B-533A-4A62-92F8-B059C761001E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Testing.NFX", "src\Gensokyo.Testing.NFX\Gensokyo.Testing.NFX.csproj", "{70C4D1C9-ECC7-46D9-BCAA-D24C2364F4F1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Xaml.NFX", "src\Gensokyo.Xaml.NFX\Gensokyo.Xaml.NFX.csproj", "{E4F4D331-92F4-419A-98F4-3C7BBB38EEF1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Layouts.NFX", "src\Gensokyo.Layouts.NFX\Gensokyo.Layouts.NFX.csproj", "{5B0A1E10-B57C-4B32-BFFF-9DCC01E2539B}"
-EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\Gensokyo.Layouts\Gensokyo.Layouts.projitems*{0054cc1f-8768-4cef-b9fd-773b0907f518}*SharedItemsImports = 13
-		src\Gensokyo.Samples\Gensokyo.Samples.projitems*{03b4f380-1c00-46cf-a9bb-06dd5c196619}*SharedItemsImports = 5
-		src\Gensokyo.Components\Gensokyo.Components.projitems*{27bb4b9d-9629-49e9-9421-309dcb47c19c}*SharedItemsImports = 13
-		src\Gensokyo.Testing\Gensokyo.Testing.projitems*{36063217-7b15-4734-98ba-ebb8270e21f1}*SharedItemsImports = 13
-		src\Gensokyo.Layouts\Gensokyo.Layouts.projitems*{5b0a1e10-b57c-4b32-bfff-9dcc01e2539b}*SharedItemsImports = 4
-		src\Gensokyo.Samples\Gensokyo.Samples.projitems*{613fdea2-9f81-4f61-a384-f2803b1e7e0c}*SharedItemsImports = 13
-		src\Gensokyo.Testing\Gensokyo.Testing.projitems*{70c4d1c9-ecc7-46d9-bcaa-d24c2364f4f1}*SharedItemsImports = 4
-		src\Gensokyo.Components\Gensokyo.Components.projitems*{85c0b724-bcfd-409b-b8cf-df402e40e145}*SharedItemsImports = 5
-		src\Gensokyo.Testing\Gensokyo.Testing.projitems*{8ba4144b-533a-4a62-92f8-b059c761001e}*SharedItemsImports = 5
-		src\Gensokyo.Layouts\Gensokyo.Layouts.projitems*{95672f8e-4206-4f3b-b05d-f6e003c3e4eb}*SharedItemsImports = 5
-		src\Gensokyo.Xaml\Gensokyo.Xaml.projitems*{ac858c1a-05f8-4cf8-926e-cac79b097b00}*SharedItemsImports = 5
-		src\Gensokyo.Xaml\Gensokyo.Xaml.projitems*{b20efee9-2800-4f60-a48a-c336da0a68f0}*SharedItemsImports = 13
-		src\Gensokyo.Components\Gensokyo.Components.projitems*{c4c05c77-cc18-485a-b909-622e9b8f028c}*SharedItemsImports = 4
-		src\Gensokyo.Xaml\Gensokyo.Xaml.projitems*{e4f4d331-92f4-419a-98f4-3c7bbb38eef1}*SharedItemsImports = 4
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{85C0B724-BCFD-409B-B8CF-DF402E40E145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85C0B724-BCFD-409B-B8CF-DF402E40E145}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85C0B724-BCFD-409B-B8CF-DF402E40E145}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85C0B724-BCFD-409B-B8CF-DF402E40E145}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC858C1A-05F8-4CF8-926E-CAC79B097B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC858C1A-05F8-4CF8-926E-CAC79B097B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC858C1A-05F8-4CF8-926E-CAC79B097B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC858C1A-05F8-4CF8-926E-CAC79B097B00}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95672F8E-4206-4F3B-B05D-F6E003C3E4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95672F8E-4206-4F3B-B05D-F6E003C3E4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95672F8E-4206-4F3B-B05D-F6E003C3E4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95672F8E-4206-4F3B-B05D-F6E003C3E4EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4C05C77-CC18-485A-B909-622E9B8F028C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4C05C77-CC18-485A-B909-622E9B8F028C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4C05C77-CC18-485A-B909-622E9B8F028C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4C05C77-CC18-485A-B909-622E9B8F028C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03B4F380-1C00-46CF-A9BB-06DD5C196619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03B4F380-1C00-46CF-A9BB-06DD5C196619}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03B4F380-1C00-46CF-A9BB-06DD5C196619}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03B4F380-1C00-46CF-A9BB-06DD5C196619}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8BA4144B-533A-4A62-92F8-B059C761001E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BA4144B-533A-4A62-92F8-B059C761001E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BA4144B-533A-4A62-92F8-B059C761001E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BA4144B-533A-4A62-92F8-B059C761001E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70C4D1C9-ECC7-46D9-BCAA-D24C2364F4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70C4D1C9-ECC7-46D9-BCAA-D24C2364F4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70C4D1C9-ECC7-46D9-BCAA-D24C2364F4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70C4D1C9-ECC7-46D9-BCAA-D24C2364F4F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4F4D331-92F4-419A-98F4-3C7BBB38EEF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4F4D331-92F4-419A-98F4-3C7BBB38EEF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4F4D331-92F4-419A-98F4-3C7BBB38EEF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4F4D331-92F4-419A-98F4-3C7BBB38EEF1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B0A1E10-B57C-4B32-BFFF-9DCC01E2539B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B0A1E10-B57C-4B32-BFFF-9DCC01E2539B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B0A1E10-B57C-4B32-BFFF-9DCC01E2539B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B0A1E10-B57C-4B32-BFFF-9DCC01E2539B}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B20EFEE9-2800-4F60-A48A-C336DA0A68F0} = {EF99DC08-D9F1-4E42-ADA9-FBA31D1C497C}
-		{0054CC1F-8768-4CEF-B9FD-773B0907F518} = {721DA068-C0DC-4723-BF02-7DB4EA2DD2F8}
-		{27BB4B9D-9629-49E9-9421-309DCB47C19C} = {4904CEE3-5D38-437D-8685-B2F53B6B0890}
-		{85C0B724-BCFD-409B-B8CF-DF402E40E145} = {4904CEE3-5D38-437D-8685-B2F53B6B0890}
-		{AC858C1A-05F8-4CF8-926E-CAC79B097B00} = {EF99DC08-D9F1-4E42-ADA9-FBA31D1C497C}
-		{95672F8E-4206-4F3B-B05D-F6E003C3E4EB} = {721DA068-C0DC-4723-BF02-7DB4EA2DD2F8}
-		{C4C05C77-CC18-485A-B909-622E9B8F028C} = {4904CEE3-5D38-437D-8685-B2F53B6B0890}
-		{613FDEA2-9F81-4F61-A384-F2803B1E7E0C} = {4F9A62C3-63B5-41A9-81F1-ABFC5AE3CFCF}
-		{03B4F380-1C00-46CF-A9BB-06DD5C196619} = {4F9A62C3-63B5-41A9-81F1-ABFC5AE3CFCF}
-		{36063217-7B15-4734-98BA-EBB8270E21F1} = {11F1FA29-54C2-4B2B-8193-35254CEAA58E}
-		{8BA4144B-533A-4A62-92F8-B059C761001E} = {11F1FA29-54C2-4B2B-8193-35254CEAA58E}
-		{70C4D1C9-ECC7-46D9-BCAA-D24C2364F4F1} = {11F1FA29-54C2-4B2B-8193-35254CEAA58E}
-		{E4F4D331-92F4-419A-98F4-3C7BBB38EEF1} = {EF99DC08-D9F1-4E42-ADA9-FBA31D1C497C}
-		{5B0A1E10-B57C-4B32-BFFF-9DCC01E2539B} = {721DA068-C0DC-4723-BF02-7DB4EA2DD2F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D71A7D5-8FC7-46DF-9E5B-742B4B87F94D}
