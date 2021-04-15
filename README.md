@@ -12,49 +12,143 @@
 
 [Engilsh](README.en.md)
 
-# 开始使用
+# 🔨开始使用
 
-🔨 [开始使用](GettingStart.md)
+使用本项目时，只需要将需要使用的项目对应的XAML文件引入App.xaml中即可。下面提供了每个项目对应的字典路径。
+
+## Gensokyo.Components
+
+```XAML
+<ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Gensokyo.Components;component/Themes/Generic.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
+```
+
+## Gensokyo.Layouts
+
+```XAML
+<ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Gensokyo.Layouts;component/Themes/Generic.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
+```
+
+## Gensokyo.Xaml
+
+```XAML
+<ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Gensokyo.Xaml;component/Themes/Generic.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
+```
+## 引用全部项目
+
+```XAML
+<ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>        
+        <ResourceDictionary Source="pack://application:,,,/Gensokyo.Components;component/Themes/Generic.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Gensokyo.Layouts;component/Themes/Generic.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Gensokyo.Xaml;component/Themes/Generic.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
+```
 
 # 项目解决的问题
 
-1. 布局的复用问题
-2. 组件的复用问题
-3. Xaml增强
+1. 布局的复用问题（目标项目: Gensokyo.Layouts）
+2. 组件的复用问题（目标项目: Gensokyo.Components）
+3. Xaml增强（目标项目: Gensokyo.Xaml）
 
-## 布局复用
+# Gensokyo.Layouts
 
-布局复用指的是，为开发者提供一种经常使用的界面设计，并将这个设计封装成一个独立的控件，来帮助开发者快速的编写界面。详情请[参阅这里](ReuseOfLayout.md)
-
-## 组件复用
-
-组件复用指的是，为开发者提供一种经常使用的组件，来帮助开发者快速的编写界面。详情请[参阅这里](ReuseOfComponent.md)
-
-## XAML增强
-
-提供XAML相关的帮助代码。
-
-| 平台 |  项目  | Nuget                      |     备注     |
-| :--: | :----: | :------------------------- | :----------: |
-| WPF  | Nitori | Gensokyo.Nitori.Layouts    | 提供布局复用 |
-|      |        | Gensokyo.Nitori.Components | 提供组件复用 |
-|      |        | Gensokyo.Nitori.Xaml       | 提供Xaml增强 |
-|      |        |                            |              |
-
-# 布局组件
+Gensokyo.Layouts项目主要用于解决布局复用问题，布局复用指的是，为开发者提供一种经常使用的界面设计，并将这个设计封装成一个独立的控件，来帮助开发者快速的编写界面。详情请[参阅这里](ReuseOfLayout.md)
 
 ## 面板
 
+暂无
+
 ## 视图
+
+暂无
 
 ## 专用布局器
 
-# 复用组件
+暂无
+
+# Gensokyo.Components
+
+Gensokyo.Components项目主要用于解决组件复用问题，组件复用指的是，为开发者提供一种经常使用的组件，来帮助开发者快速的编写界面。详情请[参阅这里](ReuseOfComponent.md)
 
 ## 按钮
 
-# XAML增强
+暂无
+
+## 色彩
+
+我们引入了一组简单的调色工具，来帮助开发者快速的完成简单调色的场景。
+
+### HSB调色器(HSBColorBar)
+
+![](HSBColorBar.png)
+
+### RGB调色器(RGBColorBar)
+
+![](RGBColorBar.png)
+
+# Gensokyo.Xaml
+
+Gensokyo.Xaml项目主要用于提供XAML相关的帮助代码。详情请[参阅这里](ReuseOfComponent.md)
+
+## 色彩空间
+
+我们在 `Gensokyo.Xaml` 项目中引入了一组色彩控件的API，用于帮助用户更快捷的实现 RGB - HSB - HSV -CMYK 等颜色空间之间的互相转化。目前我们实现了HSB-RGB 颜色空间的互相转化。
+
+### 类
+
+* [HSBColorSpace](HSBColorSpace.md)
+
+### 枚举
+
+暂无
+
+### 结构体
+
+暂无
 
 ## 转换器
 
+我们在 `Gensokyo.Xaml` 项目中引入了一组关于转换器的API，用于帮助用户更快捷的实现XAML转换器。目前我们实现了一组默认的转换器。
+
+### 类
+
+* False2VisibilityConverter
+* True2VisibilityConverter
+* DoubleToIntConverter
+
+### 枚举
+
+暂无
+
+### 结构体
+
+暂无
+
 ## XAML标记
+
+我们计划在 `Gensokyo.Xaml` 项目中引入了一组关于Xaml标记相关的API。
+
+### 类型
+
+暂无
+
+### 枚举
+
+暂无
+
+### 结构体
+
+暂无
