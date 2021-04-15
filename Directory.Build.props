@@ -1,0 +1,12 @@
+<Project>
+	<PropertyGroup>
+		<TargetFrameworks>net5.0-Windows;net472;net461;net45;net40;</TargetFrameworks>
+		<Authors>Acoris&lt;731984870@qq.com&gt;</Authors>
+		<Description>Gensokyo是一个Xaml工具库</Description>
+		<Copyright>All copyright reserved by Acorisoft</Copyright>
+		<Company>Acorisoft</Company>
+		<RepositoryUrl>https://github.com/Acorisoft/Gensokyo</RepositoryUrl>
+		<RepositoryType>Github</RepositoryType>
+		
+	</PropertyGroup>
+</Project>

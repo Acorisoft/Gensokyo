@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gensokyo.Samples.Core"
+        xmlns:components="https://github.com/Acorisoft/Gensokyo/Components"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel>
+            <components:HSBColorBar/>
+            <components:RGBColorBar/>
+        </StackPanel>
     </Grid>
 </Window>
