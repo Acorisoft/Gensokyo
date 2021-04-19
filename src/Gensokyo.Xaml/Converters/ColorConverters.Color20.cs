@@ -10,9 +10,9 @@ namespace Gensokyo.Xaml.Converters
 {
     public class Color20AccentConverter : ColorBaseConverter
     {
-        protected override void SetOpacity(Brush brush)
+        protected override void SetOpacity(Brush brush, ref Color color)
         {
-            brush.Opacity = 0.2d;
+            color.A = (byte)(255 * 0.2d);
         }
     }
 }

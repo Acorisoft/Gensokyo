@@ -10,7 +10,7 @@ namespace Gensokyo.Xaml.Converters
 {
     static class ColorConverters
     {
-        internal static readonly ConcurrentDictionary<string , Brush> BrushCache = new ConcurrentDictionary<string, Brush>();
-        internal static readonly ConcurrentDictionary<Brush , string> StringCache = new ConcurrentDictionary<Brush, string>();
+        internal static readonly ConcurrentDictionary<Color , Brush> BrushCache = new ConcurrentDictionary<Color, Brush>();
+        internal static readonly ConcurrentDictionary<Brush , Color> StringCache = new ConcurrentDictionary<Brush, Color>();
     }
 }

@@ -10,7 +10,7 @@ namespace Gensokyo.Xaml.Converters
 {
     public class Color100AccentConverter : ColorBaseConverter
     {
-        protected override void SetOpacity(Brush brush)
+        protected override void SetOpacity(Brush brush, ref Color color)
         {
         }
     }

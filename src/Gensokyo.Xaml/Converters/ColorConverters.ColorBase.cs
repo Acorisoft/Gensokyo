@@ -10,22 +10,19 @@ namespace Gensokyo.Xaml.Converters
 {
     public abstract class ColorBaseConverter : GenericConverterBase<string, SolidColorBrush>
     {
-        protected abstract void SetOpacity(Brush brush);
+        protected abstract void SetOpacity(Brush brush, ref Color color);
 
         protected override sealed object ConvertBackCore(SolidColorBrush brush, object parameter, CultureInfo culture)
         {
-
-            if (ColorConverters.StringCache.TryGetValue(brush, out string value))
+            if (ColorConverters.StringCache.TryGetValue(brush, out Color value))
             {
-                return value;
+                return value.ToString();
             }
             else
             {
-                value = brush.ToString();
-
                 if (ColorConverters.StringCache.TryAdd(brush, value))
                 {
-                    return value;
+                    return value.ToString();
                 }
                 else
                 {
@@ -42,18 +39,20 @@ namespace Gensokyo.Xaml.Converters
 
         protected override sealed object ConvertFromCore(string value, object parameter, CultureInfo culture)
         {
-            if (ColorConverters.BrushCache.TryGetValue(value, out var brush))
+            var color = (Color)ColorConverter.ConvertFromString(value);
+
+            if (ColorConverters.BrushCache.TryGetValue(color, out var brush))
             {
                 return brush;
             }
             else
             {
-                brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(value));
+                SetOpacity(null, ref color);
+                brush = new SolidColorBrush(color);
                 
-                if (ColorConverters.BrushCache.TryAdd(value, brush))
+                if (ColorConverters.BrushCache.TryAdd(color, brush))
                 {
-                    ColorConverters.StringCache.TryAdd(brush, value);
-                    SetOpacity(brush);
+                    ColorConverters.StringCache.TryAdd(brush, color);
                 }
                 else
                 {
@@ -66,12 +65,13 @@ namespace Gensokyo.Xaml.Converters
 
         protected override sealed object ConvertFromFallbackValue(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#007ACC"));
+            var color = (Color)ColorConverter.ConvertFromString("#007ACC");
+            var brush = new SolidColorBrush(color);
 
-            if (ColorConverters.BrushCache.TryAdd("#007ACC", brush))
+            if (ColorConverters.BrushCache.TryAdd(color, brush))
             {
-                ColorConverters.StringCache.TryAdd(brush, "#007ACC");
-                SetOpacity(brush);
+                SetOpacity(brush,ref color);
+                ColorConverters.StringCache.TryAdd(brush, color);
             }
             else
             {
