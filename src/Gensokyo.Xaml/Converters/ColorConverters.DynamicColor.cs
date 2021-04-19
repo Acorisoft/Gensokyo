@@ -12,7 +12,6 @@ namespace Gensokyo.Xaml.Converters
         protected override void SetOpacity(Brush brush, ref Color color)
         {
             color.A = (byte)(255 * Opacity);
-            brush.Opacity = Opacity;
         }
 
         public double Opacity { get; set; }
