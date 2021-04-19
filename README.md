@@ -87,7 +87,7 @@ Gensokyo.Components项目主要用于解决组件复用问题，组件复用指�
 
 暂无
 
-## 色彩
+## 调色器
 
 我们引入了一组简单的调色工具，来帮助开发者快速的完成简单调色的场景。
 
@@ -128,6 +128,17 @@ Gensokyo.Xaml项目主要用于提供XAML相关的帮助代码。详情请[参�
 * False2VisibilityConverter
 * True2VisibilityConverter
 * DoubleToIntConverter
+* Color10AccentConverter
+* Color20AccentConverter
+* Color30AccentConverter
+* Color40AccentConverter
+* Color50AccentConverter
+* Color60AccentConverter
+* Color70AccentConverter
+* Color80AccentConverter
+* Color90AccentConverter
+* Color100AccentConverter
+* ColorBaseConverter
 
 ### 枚举
 
@@ -152,3 +163,10 @@ Gensokyo.Xaml项目主要用于提供XAML相关的帮助代码。详情请[参�
 ### 结构体
 
 暂无
+
+## XAML相关帮助类
+
+### 类型
+
+* BindingProxy
+* BindingProxy<T>
