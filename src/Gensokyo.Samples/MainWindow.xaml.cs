@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 
 namespace Gensokyo.Samples.Core
 {
+    using Gensokyo.Xaml.ColorSpace;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>

@@ -2,8 +2,13 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gensokyo.Components\Gensokyo.Components.csproj" />
+    <ProjectReference Include="..\Gensokyo.Layouts\Gensokyo.Layouts.csproj" />
+    <ProjectReference Include="..\Gensokyo.Xaml\Gensokyo.Xaml.csproj" />
+  </ItemGroup>
 
 </Project>

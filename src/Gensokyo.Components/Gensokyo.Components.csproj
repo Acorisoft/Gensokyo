@@ -1,8 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<UseWPF>true</UseWPF>
+		<PackageId>Gensokyo.Components</PackageId>
+	</PropertyGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Gensokyo.Xaml\Gensokyo.Xaml.csproj" />
+	</ItemGroup>
 </Project>
