@@ -7,9 +7,9 @@ using System.Windows.Media;
 
 namespace Gensokyo.Xaml.Converters
 {
-    public class DynamicColorAccentConverter : ColorBaseConverter
+    public class DegreeColorConverter : ColorBaseConverter
     {
-        protected override void SetOpacity(Brush brush, ref Color color)
+        protected override void SetOpacity(ref Color color)
         {
             color.A = (byte)(255 * Opacity);
         }

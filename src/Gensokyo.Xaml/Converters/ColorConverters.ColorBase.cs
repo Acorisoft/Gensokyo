@@ -10,7 +10,7 @@ namespace Gensokyo.Xaml.Converters
 {
     public abstract class ColorBaseConverter : GenericConverterBase<string, SolidColorBrush>
     {
-        protected abstract void SetOpacity(Brush brush, ref Color color);
+        protected abstract void SetOpacity(ref Color color);
 
         protected override sealed object ConvertBackCore(SolidColorBrush brush, object parameter, CultureInfo culture)
         {
@@ -47,7 +47,7 @@ namespace Gensokyo.Xaml.Converters
             }
             else
             {
-                SetOpacity(null, ref color);
+                SetOpacity(ref color);
                 brush = new SolidColorBrush(color);
                 
                 if (ColorConverters.BrushCache.TryAdd(color, brush))
@@ -70,7 +70,7 @@ namespace Gensokyo.Xaml.Converters
 
             if (ColorConverters.BrushCache.TryAdd(color, brush))
             {
-                SetOpacity(brush,ref color);
+                SetOpacity(ref color);
                 ColorConverters.StringCache.TryAdd(brush, color);
             }
             else
