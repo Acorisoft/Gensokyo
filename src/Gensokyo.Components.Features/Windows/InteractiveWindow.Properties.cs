@@ -16,9 +16,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using Gensokyo.Xaml;
-namespace Gensokyo.Components.Interactives
+
+namespace Gensokyo.Components.Windows
 {
-    partial class IxContentHost
+    partial class InteractiveWindow
     {
         public object LeftSide
         {
@@ -114,6 +115,36 @@ namespace Gensokyo.Components.Interactives
         {
             get => (string)GetValue(BottomSideStringFormatProperty);
             set => SetValue(BottomSideStringFormatProperty, value);
+        }
+
+        public Brush Color
+        {
+            get => (Brush)GetValue(ColorProperty);
+            set => SetValue(ColorProperty, value);
+        }
+
+        public object TitleBar
+        {
+            get => (object)GetValue(TitleBarProperty);
+            set => SetValue(TitleBarProperty, value);
+        }
+
+        public DataTemplate TitleBarTemplate
+        {
+            get => (DataTemplate)GetValue(TitleBarTemplateProperty);
+            set => SetValue(TitleBarTemplateProperty, value);
+        }
+
+        public DataTemplateSelector TitleBarTemplateSelector
+        {
+            get => (DataTemplateSelector)GetValue(TitleBarTemplateSelectorProperty);
+            set => SetValue(TitleBarTemplateSelectorProperty, value);
+        }
+
+        public string TitleBarStringFormat
+        {
+            get => (string)GetValue(TitleBarStringFormatProperty);
+            set => SetValue(TitleBarStringFormatProperty, value);
         }
 
     }

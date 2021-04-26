@@ -15,12 +15,13 @@ using System.Windows.Shapes;
 
 namespace Gensokyo.Samples.Core
 {
+    using Gensokyo.Components.Windows;
     using Gensokyo.Xaml.ColorSpace;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : InteractiveWindow
     {
         public MainWindow()
         {

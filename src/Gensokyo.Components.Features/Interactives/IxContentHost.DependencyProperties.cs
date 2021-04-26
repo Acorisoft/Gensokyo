@@ -117,5 +117,36 @@ namespace Gensokyo.Components.Interactives
             typeof(object),
             typeof(IxContentHost),
             new PropertyMetadata(null));
+
+
+
+        public static readonly DependencyProperty ColorProperty = DependencyProperty.Register(
+            "Color",
+            typeof(Brush),
+            typeof(IxContentHost),
+            new PropertyMetadata(null));
+        public static readonly DependencyProperty TitleBarStringFormatProperty = DependencyProperty.Register(
+            "TitleBarStringFormat",
+            typeof(string),
+            typeof(IxContentHost),
+            new PropertyMetadata(null));
+
+        public static readonly DependencyProperty TitleBarTemplateSelectorProperty = DependencyProperty.Register(
+            "TitleBarTemplateSelector",
+            typeof(DataTemplateSelector),
+            typeof(IxContentHost),
+            new PropertyMetadata(null));
+
+        public static readonly DependencyProperty TitleBarTemplateProperty = DependencyProperty.Register(
+            "TitleBarTemplate",
+            typeof(DataTemplate),
+            typeof(IxContentHost),
+            new PropertyMetadata(null));
+
+        public static readonly DependencyProperty TitleBarProperty = DependencyProperty.Register(
+            "TitleBar",
+            typeof(object),
+            typeof(IxContentHost),
+            new PropertyMetadata(null));
     }
 }

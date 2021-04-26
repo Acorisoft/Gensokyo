@@ -1,27 +1,30 @@
-﻿<Window x:Class="Gensokyo.Samples.Core.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Gensokyo.Samples.Core"
-        xmlns:components="https://github.com/Acorisoft/Gensokyo/Components"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+﻿<components:InteractiveWindow x:Class="Gensokyo.Samples.Core.MainWindow"
+                              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                              xmlns:local="clr-namespace:Gensokyo.Samples.Core"
+                              xmlns:components="https://github.com/Acorisoft/Gensokyo/Components"
+                              mc:Ignorable="d"
+                              Title="MainWindow" Height="450" Width="800">
+    <components:InteractiveWindow.TitleBar>
+        <Grid WindowChrome.IsHitTestVisibleInChrome="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <components:ToggleSwipeButton/>
+        </Grid>
+    </components:InteractiveWindow.TitleBar>
+    <components:InteractiveWindow.TopSide>
+        <Grid Background="CornflowerBlue">
+            
+        </Grid>
+    </components:InteractiveWindow.TopSide>
     <Grid>
-        <components:IxContentHost>
-            <components:IxContentHost.LeftSide>
-                <Grid Background="CornflowerBlue"/>
-            </components:IxContentHost.LeftSide>
-            <components:IxContentHost.TopSide>
-                <Grid Background="Coral"/>
-            </components:IxContentHost.TopSide>
-            <components:IxContentHost.BottomSide>
-                <Grid Background="SaddleBrown"/>
-            </components:IxContentHost.BottomSide>
-            <components:IxContentHost.RightSide>
-                <Grid Background="Magenta" Width="256"/>
-            </components:IxContentHost.RightSide>
-            <Grid Background="Red"/>
-        </components:IxContentHost>
+        <ScrollViewer>
+            <StackPanel Height="3000" Background="SeaGreen"/>
+        </ScrollViewer>
     </Grid>
-</Window>
+</components:InteractiveWindow>

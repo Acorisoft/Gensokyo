@@ -1,12 +1,7 @@
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ï»¿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:o="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
-
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Gensokyo.Components;component/Colors/ColorBar.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Gensokyo.Components;component/Interactives/IxContentHost.xaml"/>
-    </ResourceDictionary.MergedDictionaries>
-    <!-- ³£ÓÃÉ« -->
+    <!-- å¸¸ç”¨è‰² -->
     <Color x:Key="Colors.Black">#000000</Color>
     <Color x:Key="Colors.White">#FFFFFF</Color>
     <Color x:Key="Colors.Paper">#F5F5F5</Color>
@@ -83,7 +78,7 @@
     <SolidColorBrush x:Key="Brushes.MaterialDesign.DeepOrange" Color="{StaticResource Colors.MaterialDesign.DeepOrange}"/>
     <SolidColorBrush x:Key="Brushes.MaterialDesign.DeepOrange.Dark" Color="{StaticResource Colors.MaterialDesign.DeepOrange.Dark}"/>
 
-    <!-- ³£ÓÃ»­Ë¢ -->
+    <!-- å¸¸ç”¨ç”»åˆ· -->
     <SolidColorBrush x:Key="Brushes.Black" Color="{StaticResource Colors.Black}"/>
     <SolidColorBrush x:Key="Brushes.White" Color="{StaticResource Colors.White}"/>
     <SolidColorBrush x:Key="Brushes.Paper" Color="{StaticResource Colors.Paper}"/>
@@ -103,7 +98,7 @@
     <SolidColorBrush x:Key="Brushes.Commons.Foreground.Hover" Color="{StaticResource Colors.White}"/>
     <SolidColorBrush x:Key="Brushes.Commons.Foreground.Press" Color="{StaticResource Colors.White}"/>
 
-    <!-- ÒõÓ° -->
+    <!-- é˜´å½± -->
     <DropShadowEffect x:Key="Effect.Shadow1" BlurRadius="5" ShadowDepth="1" Direction="270" Color="{StaticResource Colors.Shadow}" Opacity=".2" RenderingBias="Performance" o:Freeze="True" />
     <DropShadowEffect x:Key="Effect.Shadow2" BlurRadius="8" ShadowDepth="1.5" Direction="270" Color="{StaticResource Colors.Shadow}" Opacity=".2" RenderingBias="Performance" o:Freeze="True" />
     <DropShadowEffect x:Key="Effect.Shadow3" BlurRadius="14" ShadowDepth="4.5" Direction="270" Color="{StaticResource Colors.Shadow}" Opacity=".2" RenderingBias="Performance" o:Freeze="True" />

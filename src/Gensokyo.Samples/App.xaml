@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/Gensokyo.Components;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Gensokyo.Components.Features;component/Themes/Generic.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

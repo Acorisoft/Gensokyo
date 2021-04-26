@@ -10,9 +10,9 @@ namespace Gensokyo.Xaml.Commands
 {
     public abstract class UICommandBase
     {
-        protected static RoutedUICommand Create(string name)
+        protected static RoutedUICommand Create<T>(string name)
         {
-            return new RoutedUICommand(name, name, typeof(UICommandBase));
+            return new RoutedUICommand(name, name, typeof(T));
         }
     }
 }

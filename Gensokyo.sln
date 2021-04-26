@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gensokyo.Testing", "src\Gen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gensokyo.Xaml", "src\Gensokyo.Xaml\Gensokyo.Xaml.csproj", "{D851191A-6543-4242-A60B-2886DF4DD44E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gensokyo.Components.Features", "src\Gensokyo.Components.Features\Gensokyo.Components.Features.csproj", "{3EDD0486-C664-4D00-841E-321767A7673D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D851191A-6543-4242-A60B-2886DF4DD44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D851191A-6543-4242-A60B-2886DF4DD44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D851191A-6543-4242-A60B-2886DF4DD44E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EDD0486-C664-4D00-841E-321767A7673D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EDD0486-C664-4D00-841E-321767A7673D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EDD0486-C664-4D00-841E-321767A7673D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EDD0486-C664-4D00-841E-321767A7673D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

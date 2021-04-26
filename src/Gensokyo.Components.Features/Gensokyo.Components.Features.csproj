@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<UseWPF>true</UseWPF>
+		<PackageId>Gensokyo.Components.Features</PackageId>
+		<TargetFrameworks>net5.0-Windows</TargetFrameworks>
+		<RootNamespace>Gensokyo.Components</RootNamespace>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="icon_64x64.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Splat" Version="9.6.1" />
+		<PackageReference Include="reactiveui" Version="12.1.5" />
+		<PackageReference Include="ReactiveUI.WPF" Version="12.1.5" />
+		<PackageReference Include="Splat.DryIoc" Version="9.6.1" />
+		<PackageReference Include="DryIoc.dll" Version="4.5.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Gensokyo.Xaml\Gensokyo.Xaml.csproj" />
+	</ItemGroup>
+</Project>
