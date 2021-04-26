@@ -8,11 +8,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <components:InteractiveHost IsOpen="True">
-            <components:InteractiveHost.Interactive>
+        <components:IxContentHost>
+            <components:IxContentHost.LeftSide>
                 <Grid Background="CornflowerBlue"/>
-            </components:InteractiveHost.Interactive>
+            </components:IxContentHost.LeftSide>
+            <components:IxContentHost.TopSide>
+                <Grid Background="Coral"/>
+            </components:IxContentHost.TopSide>
+            <components:IxContentHost.BottomSide>
+                <Grid Background="SaddleBrown"/>
+            </components:IxContentHost.BottomSide>
+            <components:IxContentHost.RightSide>
+                <Grid Background="Magenta" Width="256"/>
+            </components:IxContentHost.RightSide>
             <Grid Background="Red"/>
-        </components:InteractiveHost>
+        </components:IxContentHost>
     </Grid>
 </Window>
