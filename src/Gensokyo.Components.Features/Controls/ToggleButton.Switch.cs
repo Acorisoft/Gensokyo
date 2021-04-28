@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -13,24 +14,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Gensokyo.Samples.Core
+namespace Gensokyo.Components.Controls
 {
-    using Gensokyo.Components.Windows;
-    using Gensokyo.Xaml.ColorSpace;
-    using System.Diagnostics;
-
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// 
     /// </summary>
-    public partial class MainWindow : InteractiveWindow
+    public partial class ToggleSwitch : ToggleButton
     {
-        public MainWindow()
+        static ToggleSwitch()
         {
-            InitializeComponent();
-        }
-
-        private void ToggleSwitch_Unchecked(object sender, RoutedEventArgs e)
-        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(ToggleSwitch), new FrameworkPropertyMetadata(typeof(ToggleSwitch)));
         }
     }
 }

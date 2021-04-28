@@ -35,7 +35,8 @@ namespace Gensokyo.Components.Interactives
 
     public class SwipeRecognitor
     {
-        protected class PointQueue
+
+        class PointQueue
         {
             private Point _Start,_Last,_Current;
             private int _Time;
@@ -67,6 +68,8 @@ namespace Gensokyo.Components.Interactives
             public bool IsPrepare => _Time < 1;
             public bool IsDetect => _Time == 6;
         }
+
+
         private DispatcherTimer _Timer;
         private double _Delta = 0;
         private SwipeDirection _Direction;
@@ -82,6 +85,10 @@ namespace Gensokyo.Components.Interactives
 
         void Sampling(object sender, EventArgs e)
         {
+            if (IsEnable)
+            {
+                return;
+            }
 
             if (Mouse.LeftButton == MouseButtonState.Pressed || Mouse.RightButton == MouseButtonState.Pressed)
             {
@@ -209,6 +216,11 @@ namespace Gensokyo.Components.Interactives
         public event SwipeStartingHandler SwipeStarting;
         public event SwipeProcessingHandler SwipeStarted;
         public event SwipeProcessingHandler SwipeProcessing;
+
+        /// <summary>
+        /// 获取或设置一个值，该值用于指示全局 <see cref="SwipeRecognitor"/> 实例，跳过手势识别。
+        /// </summary>
+        public static bool IsEnable { get; set; } = true;
         public int Threshould { get; set; }
     }
 }

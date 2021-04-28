@@ -93,7 +93,7 @@ namespace Gensokyo.Components.Interactives
         {
             public override void Transform(FrameworkElement parent, FrameworkElement element, double delta)
             {
-                var width = element.ActualHeight;
+                var width = element.ActualWidth;
                 var transform = new TranslateTransform(parent.ActualWidth - width * delta, 0);
                 element.RenderTransform = transform;
             }

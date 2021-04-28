@@ -6,7 +6,7 @@
                               xmlns:local="clr-namespace:Gensokyo.Samples.Core"
                               xmlns:components="https://github.com/Acorisoft/Gensokyo/Components"
                               mc:Ignorable="d"
-                              Title="MainWindow" Height="450" Width="800">
+                              Title="{Binding ElementName=toggle,Path=CurrentValue,Mode=OneWay}" Height="450" Width="800">
     <components:InteractiveWindow.TitleBar>
         <Grid WindowChrome.IsHitTestVisibleInChrome="True">
             <Grid.ColumnDefinitions>
@@ -15,6 +15,7 @@
             </Grid.ColumnDefinitions>
 
             <components:ToggleSwipeButton/>
+            <TextBlock Grid.Column="1" Text="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow},Path=Title,Mode=OneWay}"/>
         </Grid>
     </components:InteractiveWindow.TitleBar>
     <components:InteractiveWindow.TopSide>
@@ -23,8 +24,11 @@
         </Grid>
     </components:InteractiveWindow.TopSide>
     <Grid>
-        <ScrollViewer>
-            <StackPanel Height="3000" Background="SeaGreen"/>
-        </ScrollViewer>
+        <StackPanel Margin="16">
+            <RadioButton Content="hello" Margin="4"/>
+            <components:ToggleSwitch Content="Left" Style="{StaticResource ToggleSwitch.Icon}" Icon="A" IsEnabled="True"/>
+            <components:ToggleState NegativeValue="Off" PositiveValue="On" Width="48"/>
+            <components:ToggleValue x:Name="toggle" NegativeValue="Off" PositiveValue="On" Width="48"/>
+        </StackPanel>
     </Grid>
 </components:InteractiveWindow>

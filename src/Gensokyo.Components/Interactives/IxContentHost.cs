@@ -53,12 +53,13 @@ namespace Gensokyo.Components.Interactives
 
             //
             //
-            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleIxLeft, ToggleIxLeft));
-            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleIxRight, ToggleIxRight));
-            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleIxUp, ToggleIxUp));
-            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleIxDown, ToggleIxDown));
+            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleIxLeft, ToggleIxLeft , AlwaysCanExecute));
+            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleIxRight, ToggleIxRight, AlwaysCanExecute));
+            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleIxUp, ToggleIxUp, AlwaysCanExecute));
+            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleIxDown, ToggleIxDown, AlwaysCanExecute));
             this.Unloaded += OnUnloaded;
         }
+
 
         private void OnSwipeStarting(SwipeDirection direction)
         {
@@ -141,6 +142,12 @@ namespace Gensokyo.Components.Interactives
 
         #region Toggle IxContentOpenState
 
+        void AlwaysCanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+            e.Handled = true;
+        }
+
         void ToggleIxRight(object sender, ExecutedRoutedEventArgs e)
         {
             _IxRight.IsOpen = !_IxRight.IsOpen;
@@ -157,7 +164,10 @@ namespace Gensokyo.Components.Interactives
         {
             _IxLeft.IsOpen = !_IxLeft.IsOpen;
         }
-
+        void ToggleSwipe(object sender, ExecutedRoutedEventArgs e)
+        {
+            SwipeRecognitor.IsEnable = !SwipeRecognitor.IsEnable;
+        }
 
         #endregion Toggle IxContentOpenState
 

@@ -10,4 +10,10 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Gensokyo.Xaml\Gensokyo.Xaml.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="Interactives\IxContentHost.xaml">
+	    <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	</ItemGroup>
 </Project>
