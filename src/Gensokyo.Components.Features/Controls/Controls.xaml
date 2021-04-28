@@ -28,7 +28,8 @@
                 <ControlTemplate TargetType="{x:Type c:ToggleSwitch}">
                     <AdornerDecorator>
                         <DockPanel>
-                            <Border Background="{TemplateBinding Background}"
+                            <Border x:Name="PART_Border"
+                                    Background="{TemplateBinding Background}"
                                     Width="84" CornerRadius="20" Padding="6"
                                     DockPanel.Dock="Left">
                                 <Border x:Name="PART_Thumb"
@@ -53,10 +54,16 @@
                         </DockPanel>
                     </AdornerDecorator>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Background}" TargetName="PART_Border"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Background" Value="LightGray" TargetName="PART_Border"/>
+                        </Trigger>
                         <EventTrigger RoutedEvent="Unchecked">
                             <BeginStoryboard>
-                                <Storyboard Storyboard.TargetName="PART_Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
-                                    <DoubleAnimationUsingKeyFrames>
+                                <Storyboard>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
                                         <EasingDoubleKeyFrame Value="36" KeyTime="0:0:0.000"/>
                                         <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.150"/>
                                     </DoubleAnimationUsingKeyFrames>
@@ -86,11 +93,10 @@
                 <ControlTemplate TargetType="{x:Type c:ToggleSwitch}">
                     <AdornerDecorator>
                         <DockPanel>
-                            <Border Background="{TemplateBinding Background}"
-                                    CornerRadius="15"
-                                    Padding="8"
-                                    DockPanel.Dock="Left"
-                                    Width="64">
+                            <Border x:Name="PART_Border"
+                                    Background="{TemplateBinding Background}"
+                                    Width="64" CornerRadius="15" Padding="8"
+                                    DockPanel.Dock="Left">
                                 <Border x:Name="PART_Thumb"
                                         Background="{StaticResource Brushes.White}"
                                         CornerRadius="99"
@@ -111,10 +117,16 @@
                         </DockPanel>
                     </AdornerDecorator>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Background}" TargetName="PART_Border"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Background" Value="LightGray" TargetName="PART_Border"/>
+                        </Trigger>
                         <EventTrigger RoutedEvent="Unchecked">
                             <BeginStoryboard>
-                                <Storyboard Storyboard.TargetName="PART_Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
-                                    <DoubleAnimationUsingKeyFrames>
+                                <Storyboard>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
                                         <EasingDoubleKeyFrame Value="36" KeyTime="0:0:0.000"/>
                                         <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.150"/>
                                     </DoubleAnimationUsingKeyFrames>
@@ -144,11 +156,10 @@
                 <ControlTemplate TargetType="{x:Type c:ToggleSwitch}">
                     <AdornerDecorator>
                         <DockPanel>
-                            <Border Background="{TemplateBinding Background}"
-                                    CornerRadius="10"
-                                    Padding="8"
-                                    DockPanel.Dock="Left"
-                                    Width="64">
+                            <Border x:Name="PART_Border"
+                                    Background="{TemplateBinding Background}"
+                                    Width="64" CornerRadius="10" Padding="8"
+                                    DockPanel.Dock="Left">
                                 <Border x:Name="PART_Thumb"
                                         Background="{StaticResource Brushes.White}"
                                         CornerRadius="4"
@@ -169,11 +180,17 @@
                         </DockPanel>
                     </AdornerDecorator>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Background}" TargetName="PART_Border"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Background" Value="LightGray" TargetName="PART_Border"/>
+                        </Trigger>
                         <EventTrigger RoutedEvent="Unchecked">
                             <BeginStoryboard>
-                                <Storyboard Storyboard.TargetName="PART_Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
-                                    <DoubleAnimationUsingKeyFrames>
-                                        <EasingDoubleKeyFrame Value="28" KeyTime="0:0:0.000"/>
+                                <Storyboard>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                                        <EasingDoubleKeyFrame Value="36" KeyTime="0:0:0.000"/>
                                         <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.150"/>
                                     </DoubleAnimationUsingKeyFrames>
                                 </Storyboard>
