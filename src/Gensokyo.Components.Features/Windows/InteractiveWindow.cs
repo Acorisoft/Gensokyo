@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gensokyo.Components.Interactives;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,12 @@ namespace Gensokyo.Components.Windows
             CommandBindings.Add(new CommandBinding(SystemCommands.MinimizeWindowCommand, OnWindowMinimum));
             CommandBindings.Add(new CommandBinding(SystemCommands.MaximizeWindowCommand, OnWindowRestore));
             CommandBindings.Add(new CommandBinding(SystemCommands.RestoreWindowCommand, OnWindowRestore));
+            CommandBindings.Add(new CommandBinding(IxContentHostCommands.ToggleEnable, ToggleEnable));
         }
 
+        void ToggleEnable(object sender, ExecutedRoutedEventArgs e)
+        {
+            SwipeRecognitor.IsEnable = !SwipeRecognitor.IsEnable;
+        }
     }
 }

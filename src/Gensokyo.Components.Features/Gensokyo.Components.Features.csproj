@@ -6,6 +6,7 @@
 		<TargetFrameworks>net5.0-Windows</TargetFrameworks>
 		<RootNamespace>Gensokyo.Components</RootNamespace>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageVersion>1.0.2</PackageVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 	<ItemGroup>

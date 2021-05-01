@@ -13,8 +13,6 @@
                 <ColumnDefinition Width="48" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-
-            <components:ToggleSwipeButton/>
             <TextBlock WindowChrome.IsHitTestVisibleInChrome="False" Grid.Column="1" Text="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow},Path=Title,Mode=OneWay}"/>
         </Grid>
     </components:InteractiveWindow.TitleBar>
@@ -26,7 +24,7 @@
     <Grid>
         <StackPanel Margin="16">
             <RadioButton Content="hello" Margin="4"/>
-            <components:ToggleSwitch Content="Left" Icon="A" IsEnabled="True"/>
+            <components:ToggleSwitch Style="{StaticResource ToggleSwitch.Circle.Little}" Content="Left" Icon="A" IsEnabled="True"/>
             <components:ToggleState NegativeValue="Off" PositiveValue="On" Width="48"/>
             <components:ToggleValue x:Name="toggle" NegativeValue="Off" PositiveValue="On" Width="48"/>
         </StackPanel>

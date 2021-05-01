@@ -152,6 +152,7 @@ namespace Gensokyo.Components.Interactives
         {
             _IxRight.IsOpen = !_IxRight.IsOpen;
         }
+
         void ToggleIxUp(object sender, ExecutedRoutedEventArgs e)
         {
             _IxUp.IsOpen = !_IxUp.IsOpen;

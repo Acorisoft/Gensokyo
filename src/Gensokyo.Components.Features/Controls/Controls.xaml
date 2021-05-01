@@ -1,9 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:c="clr-namespace:Gensokyo.Components.Controls">
+                    xmlns:c="clr-namespace:Gensokyo.Components.Controls"
+                    xmlns:xaml="https://github.com/Acorisoft/Gensokyo/Xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/Gensokyo.Components.Features;component/Themes/Color.xaml"/>
     </ResourceDictionary.MergedDictionaries>
+    
+    <!--  -->
+    <xaml:DegreeBrushConverter x:Key="DegreeBrush" Opacity=".3"/>
 
     <Style x:Key="ToggleSwitch.Base" TargetType="{x:Type c:ToggleSwitch}">
         <Setter Property="Background" Value="{StaticResource Brushes.MaterialDesign.Indigo}" />
@@ -30,6 +34,8 @@
                         <DockPanel>
                             <Border x:Name="PART_Border"
                                     Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
                                     Width="84" CornerRadius="20" Padding="6"
                                     DockPanel.Dock="Left">
                                 <Border x:Name="PART_Thumb"
@@ -95,6 +101,8 @@
                         <DockPanel>
                             <Border x:Name="PART_Border"
                                     Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
                                     Width="64" CornerRadius="15" Padding="8"
                                     DockPanel.Dock="Left">
                                 <Border x:Name="PART_Thumb"
@@ -149,6 +157,72 @@
         </Setter>
     </Style>
 
+    <Style x:Key="ToggleSwitch.Circle.Little" TargetType="{x:Type c:ToggleSwitch}" BasedOn="{StaticResource ToggleSwitch.Base}">
+        <Setter Property="Height" Value="20" />
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c:ToggleSwitch}">
+                    <AdornerDecorator>
+                        <DockPanel>
+                            <Border x:Name="PART_Border"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Width="48" CornerRadius="10" Padding="4"
+                                    DockPanel.Dock="Left">
+                                <Border x:Name="PART_Thumb"
+                                        Background="{StaticResource Brushes.White}"
+                                        CornerRadius="99"
+                                        Height="12"
+                                        Width="12"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center">
+                                    <Border.RenderTransform>
+                                        <TranslateTransform X="0"/>
+                                    </Border.RenderTransform>
+                                </Border>
+                            </Border>
+                            <ContentPresenter ContentSource="Content"
+                                              DockPanel.Dock="Right"
+                                              Margin="16 0 0 0"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </DockPanel>
+                    </AdornerDecorator>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Background}" TargetName="PART_Border"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Background" Value="LightGray" TargetName="PART_Border"/>
+                        </Trigger>
+                        <EventTrigger RoutedEvent="Unchecked">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                                        <EasingDoubleKeyFrame Value="26" KeyTime="0:0:0.000"/>
+                                        <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.150"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Checked">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetName="PART_Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                                    <DoubleAnimationUsingKeyFrames>
+                                        <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.000"/>
+                                        <EasingDoubleKeyFrame Value="26" KeyTime="0:0:0.150"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style x:Key="ToggleSwitch.Square" TargetType="{x:Type c:ToggleSwitch}" BasedOn="{StaticResource ToggleSwitch.Base}">
         <Setter Property="Height" Value="36" />
         <Setter Property="Template">
@@ -158,6 +232,8 @@
                         <DockPanel>
                             <Border x:Name="PART_Border"
                                     Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
                                     Width="64" CornerRadius="10" Padding="8"
                                     DockPanel.Dock="Left">
                                 <Border x:Name="PART_Thumb"
@@ -181,10 +257,10 @@
                     </AdornerDecorator>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Background}" TargetName="PART_Border"/>
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Positive}" TargetName="PART_Border"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter Property="Background" Value="LightGray" TargetName="PART_Border"/>
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Negative}" TargetName="PART_Border"/>
                         </Trigger>
                         <EventTrigger RoutedEvent="Unchecked">
                             <BeginStoryboard>
@@ -215,19 +291,20 @@
     <Style x:Key="ToggleState.Base" TargetType="{x:Type c:ToggleState}">
         <Setter Property="Negative" Value="#636363" />
         <Setter Property="Positive" Value="#FFAB12" />
+        <Setter Property="BorderThickness" Value="2" />
         <Setter Property="Foreground" Value="{StaticResource Brushes.Paper}" />
-        <Setter Property="CornerRadius" Value="8" />
         <Setter Property="MinWidth" Value="32" />
         <Setter Property="MinHeight" Value="32" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type c:ToggleState}">
                     <AdornerDecorator>
                         <Border x:Name="PART_Border"
-                                Background="{TemplateBinding Positive}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Positive,Converter={StaticResource DegreeBrush}}"
+                                BorderBrush="{TemplateBinding Positive}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 CornerRadius="{TemplateBinding CornerRadius}">
                             <Grid>
@@ -244,10 +321,12 @@
                     </AdornerDecorator>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Positive}" TargetName="PART_Border"/>
+                            <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Positive}" TargetName="PART_Border"/>
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Positive,Converter={StaticResource DegreeBrush}}" TargetName="PART_Border"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Negative}" TargetName="PART_Border"/>
+                            <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Negative}" TargetName="PART_Border"/>
+                            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Negative,Converter={StaticResource DegreeBrush}}" TargetName="PART_Border"/>
                         </Trigger>
                         <EventTrigger RoutedEvent="Unchecked">
                             <BeginStoryboard>
@@ -330,6 +409,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     
     <Style TargetType="{x:Type c:ToggleSwitch}" BasedOn="{StaticResource ToggleSwitch.Circle}"/>
     <Style TargetType="{x:Type c:ToggleState}" BasedOn="{StaticResource ToggleState.Base}"/>

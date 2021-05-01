@@ -33,6 +33,7 @@ namespace Gensokyo.Components.Interactives
             ToggleIxUp      = Create("ToggleIxUp");
             ToggleIxDown    = Create("ToggleIxDown");
             ToggleSwipe     = Create("ToggleSwipe");
+            ToggleEnable    = Create("ToggleEnable");
         }
 
         public static RoutedUICommand Create(string name)
@@ -43,27 +44,32 @@ namespace Gensokyo.Components.Interactives
         /// <summary>
         /// 
         /// </summary>
-        public static RoutedUICommand ToggleIxLeft { get; }
+        public static RoutedCommand ToggleIxLeft { get; }
 
         /// <summary>
         /// 
         /// </summary>
-        public static RoutedUICommand ToggleIxRight { get; }
+        public static RoutedCommand ToggleIxRight { get; }
 
         /// <summary>
         /// 
         /// </summary>
-        public static RoutedUICommand ToggleIxUp { get; }
+        public static RoutedCommand ToggleIxUp { get; }
 
         /// <summary>
         /// 
         /// </summary>
-        public static RoutedUICommand ToggleIxDown { get; }
+        public static RoutedCommand ToggleIxDown { get; }
 
 
         /// <summary>
         /// 
         /// </summary>
-        public static RoutedUICommand ToggleSwipe { get; }
+        public static RoutedCommand ToggleSwipe { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RoutedCommand ToggleEnable { get; }
     }
 }
