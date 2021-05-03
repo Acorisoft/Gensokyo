@@ -21,6 +21,12 @@ namespace Gensokyo.Components.Windows
 {
     partial class InteractiveWindow
     {
+        public object Dialog
+        {
+            get => GetValue(DialogProperty);
+            private set => SetValue(DialogPropertyKey, value);
+        }
+
         public object LeftSide
         {
             get => (object)GetValue(LeftSideProperty);

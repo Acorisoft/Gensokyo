@@ -10,30 +10,16 @@ using Gensokyo.Xaml.Commands;
 
 namespace Gensokyo.Components.Interactives
 {
-
-    public class ToggleSwipeButton : PrimitiveButton
-    {
-        static ToggleSwipeButton()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(ToggleSwipeButton), new FrameworkPropertyMetadata(typeof(ToggleSwipeButton)));
-        }
-
-        protected override void OnClick()
-        {
-            SwipeRecognitor.IsEnable = !SwipeRecognitor.IsEnable;
-        }
-    }
-
     public static class IxContentHostCommands 
     {
         static IxContentHostCommands()
         {
-            ToggleIxLeft    = Create("ToggleIxLeft");
-            ToggleIxRight   = Create("ToggleIxRight");
-            ToggleIxUp      = Create("ToggleIxUp");
-            ToggleIxDown    = Create("ToggleIxDown");
-            ToggleSwipe     = Create("ToggleSwipe");
-            ToggleEnable    = Create("ToggleEnable");
+            ToggleIxLeft    = Create("IxContentHostCommands.ToggleIxLeft");
+            ToggleIxRight   = Create("IxContentHostCommands.ToggleIxRight");
+            ToggleIxUp      = Create("IxContentHostCommands.ToggleIxUp");
+            ToggleIxDown    = Create("IxContentHostCommands.ToggleIxDown");
+            ToggleSwipe     = Create("IxContentHostCommands.ToggleSwipe");
+            ToggleEnable    = Create("IxContentHostCommands.ToggleEnable");
         }
 
         public static RoutedUICommand Create(string name)
